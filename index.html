@@ -34,8 +34,10 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
     }
-    header, main, footer { width: 100%; max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+    header, main, footer { position: relative; z-index: 1; width: 100%; max-width: 1040px; margin: 0 auto; padding: 0 20px; }
     header {
       display: flex; align-items: center; justify-content: space-between;
       padding-top: 24px; gap: 12px; flex-wrap: wrap;
@@ -63,18 +65,34 @@
     @keyframes pulse { 0%,100% { opacity: 1 } 50% { opacity: .3 } }
     h1 { font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.05; font-weight: 800; letter-spacing: -.02em; max-width: 14ch; }
     h1 span { color: var(--sky); }
-    .lead { margin-top: 20px; font-size: clamp(1rem, 2.2vw, 1.2rem); color: var(--muted); max-width: 56ch; line-height: 1.6; }
+    .lead { margin-top: 20px; font-size: clamp(1rem, 2.2vw, 1.2rem); color: var(--muted); max-width: 46ch; line-height: 1.6; }
     .features {
       margin-top: 40px; display: grid; gap: 16px;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
     .card {
-      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
+      background: rgba(11,37,64,.55); border: 1px solid rgba(255,255,255,.14);
+      -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
       border-radius: 14px; padding: 20px;
     }
     .card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
     .card p { font-size: .92rem; color: var(--muted); line-height: 1.5; }
     .card .icon { font-size: 1.4rem; margin-bottom: 10px; }
+    .art-wrap { position: absolute; inset: 0; overflow: hidden; z-index: 0; pointer-events: none; }
+    .art {
+      position: absolute; top: 90px; right: max(0px, calc((100vw - 1280px) / 2));
+      width: min(50vw, 700px); opacity: .95;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 35%);
+      mask-image: linear-gradient(to right, transparent 0%, #000 35%);
+    }
+    .art img { display: block; width: 100%; height: auto; }
+    @media (max-width: 760px) {
+      .art {
+        width: 140vw; right: -25vw; top: 60px; opacity: .28;
+        -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+        mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+      }
+    }
     footer {
       padding-top: 20px; padding-bottom: 28px; font-size: .85rem; color: var(--muted);
       border-top: 1px solid rgba(255,255,255,.1);
@@ -83,6 +101,7 @@
   </style>
 </head>
 <body>
+  <div class="art-wrap" aria-hidden="true"><div class="art"><img src="img/house.svg" alt=""></div></div>
   <header>
     <div class="brand">
       <svg viewBox="0 0 64 64" aria-hidden="true">
