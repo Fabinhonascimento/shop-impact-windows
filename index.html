@@ -31,7 +31,7 @@
       display: flex; flex-direction: column;
       background-color: var(--navy);
       background-image:
-        linear-gradient(180deg, rgba(8,24,44,.55) 0%, rgba(8,24,44,.35) 40%, rgba(8,24,44,.75) 100%),
+        linear-gradient(180deg, rgba(8,24,44,.6) 0%, rgba(8,24,44,.48) 45%, rgba(8,24,44,.8) 100%),
         var(--hero, url("img/hero.jpg"));
       background-size: cover;
       background-position: center;
@@ -60,22 +60,37 @@
       text-shadow: 0 1px 12px rgba(0,0,0,.4);
     }
     h1 {
-      margin-top: 22px;
+      margin-top: 18px;
       font-family: "Playfair Display", Georgia, serif; font-weight: 500;
       font-size: clamp(2.4rem, 7vw, 5rem); line-height: 1.1;
       text-shadow: 0 2px 24px rgba(0,0,0,.45);
     }
-    h1 em { display: block; font-style: italic; color: #fff; margin-top: .15em; }
+    h1 span { display: block; font-style: italic; }
+    .badge {
+      margin-top: 18px; display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(251,191,36,.18); color: #fde68a;
+      border: 1px solid rgba(251,191,36,.5); border-radius: 999px;
+      padding: 6px 14px; font-size: .85rem; font-weight: 600;
+      -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+    }
+    .badge .dot { width: 8px; height: 8px; border-radius: 50%; background: #fbbf24; animation: pulse 1.6s infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1 } 50% { opacity: .3 } }
     .lead {
-      margin-top: 22px; max-width: 40ch; font-size: clamp(1rem, 2vw, 1.15rem); line-height: 1.6; color: var(--muted);
+      margin-top: 22px; max-width: 44ch; font-size: clamp(1rem, 2vw, 1.15rem); line-height: 1.6; color: var(--muted);
       text-shadow: 0 1px 12px rgba(0,0,0,.5);
     }
-    .tags { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-    .tags span {
-      font-size: .85rem; font-weight: 500; padding: 8px 14px; border-radius: 999px;
-      background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.3);
-      -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+    .features {
+      margin-top: 40px; width: 100%; max-width: 960px; display: grid; gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); text-align: left;
     }
+    .card {
+      background: rgba(8,24,44,.55); border: 1px solid rgba(255,255,255,.2);
+      border-radius: 14px; padding: 18px 20px;
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+    }
+    .card .icon { font-size: 1.3rem; margin-bottom: 8px; }
+    .card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+    .card p { font-size: .9rem; color: var(--muted); line-height: 1.5; }
     footer {
       padding-top: 18px; padding-bottom: 24px; font-size: .82rem; color: var(--muted);
       display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;
@@ -105,13 +120,27 @@
 
   <main>
     <p class="eyebrow">Shop Impact Windows</p>
-    <h1 data-i18n-html="title">Impact Windows &amp; Doors<em>Coming Soon</em></h1>
-    <p class="lead" data-i18n="lead">Our new website is under construction. Soon you'll be able to shop hurricane impact windows and doors for your home or business in South Florida — right here.</p>
-    <div class="tags">
-      <span data-i18n="t1">Impact windows</span>
-      <span data-i18n="t2">French &amp; front doors</span>
-      <span data-i18n="t3">Sliding glass doors</span>
-    </div>
+    <div class="badge"><span class="dot"></span><span data-i18n="badge">Website under construction</span></div>
+    <h1 data-i18n-html="title">Something strong is <span>coming soon.</span></h1>
+    <p class="lead" data-i18n="lead">We're building our new website. Soon you'll be able to shop hurricane impact windows and doors for your home or business in South Florida — right here.</p>
+
+    <section class="features" aria-label="What we offer">
+      <div class="card">
+        <div class="icon" aria-hidden="true">🌀</div>
+        <h3 data-i18n="f1t">Hurricane protection</h3>
+        <p data-i18n="f1d">Impact-rated windows and doors built for South Florida storms.</p>
+      </div>
+      <div class="card">
+        <div class="icon" aria-hidden="true">🏠</div>
+        <h3 data-i18n="f2t">Homes &amp; businesses</h3>
+        <p data-i18n="f2d">Solutions for residential and commercial projects.</p>
+      </div>
+      <div class="card">
+        <div class="icon" aria-hidden="true">⚡</div>
+        <h3 data-i18n="f3t">Energy efficiency</h3>
+        <p data-i18n="f3d">Reduce noise, UV and cooling costs all year round.</p>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -122,19 +151,28 @@
   <script>
     const T = {
       en: {
-        title: "Impact Windows &amp; Doors<em>Coming Soon</em>",
-        lead: "Our new website is under construction. Soon you'll be able to shop hurricane impact windows and doors for your home or business in South Florida — right here.",
-        t1: "Impact windows", t2: "French & front doors", t3: "Sliding glass doors"
+        badge: "Website under construction",
+        title: 'Something strong is <span>coming soon.</span>',
+        lead: "We're building our new website. Soon you'll be able to shop hurricane impact windows and doors for your home or business in South Florida — right here.",
+        f1t: "Hurricane protection", f1d: "Impact-rated windows and doors built for South Florida storms.",
+        f2t: "Homes & businesses", f2d: "Solutions for residential and commercial projects.",
+        f3t: "Energy efficiency", f3d: "Reduce noise, UV and cooling costs all year round."
       },
       es: {
-        title: "Ventanas y Puertas de Impacto<em>Muy Pronto</em>",
-        lead: "Nuestro nuevo sitio web está en construcción. Muy pronto podrá comprar ventanas y puertas de impacto contra huracanes para su hogar o negocio en el Sur de la Florida — aquí mismo.",
-        t1: "Ventanas de impacto", t2: "Puertas francesas y de entrada", t3: "Puertas corredizas de vidrio"
+        badge: "Sitio web en construcción",
+        title: 'Algo fuerte <span>viene pronto.</span>',
+        lead: "Estamos construyendo nuestro nuevo sitio web. Muy pronto podrá comprar ventanas y puertas de impacto contra huracanes para su hogar o negocio en el Sur de la Florida — aquí mismo.",
+        f1t: "Protección contra huracanes", f1d: "Ventanas y puertas de impacto hechas para las tormentas del Sur de la Florida.",
+        f2t: "Hogares y negocios", f2d: "Soluciones para proyectos residenciales y comerciales.",
+        f3t: "Eficiencia energética", f3d: "Menos ruido, rayos UV y costos de aire acondicionado todo el año."
       },
       pt: {
-        title: "Janelas e Portas de Impacto<em>Em Breve</em>",
-        lead: "Nosso novo site está em construção. Em breve você poderá comprar janelas e portas de impacto contra furacões para sua casa ou empresa no Sul da Flórida — aqui mesmo.",
-        t1: "Janelas de impacto", t2: "Portas francesas e de entrada", t3: "Portas de vidro de correr"
+        badge: "Site em construção",
+        title: 'Algo forte está <span>chegando em breve.</span>',
+        lead: "Estamos construindo nosso novo site. Em breve você poderá comprar janelas e portas de impacto contra furacões para sua casa ou empresa no Sul da Flórida — aqui mesmo.",
+        f1t: "Proteção contra furacões", f1d: "Janelas e portas de impacto feitas para as tempestades do Sul da Flórida.",
+        f2t: "Casas e empresas", f2d: "Soluções para projetos residenciais e comerciais.",
+        f3t: "Eficiência energética", f3d: "Menos ruído, raios UV e gastos com ar-condicionado o ano todo."
       }
     };
     function setLang(lang) {
