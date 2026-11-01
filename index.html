@@ -3,182 +3,134 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shop Impact Windows – Coming Soon</title>
-  <meta name="description" content="Shop Impact Windows – hurricane impact windows and doors in South Florida. Our new website is coming soon.">
-  <meta property="og:title" content="Shop Impact Windows – Coming Soon">
-  <meta property="og:description" content="Hurricane impact windows and doors in South Florida. Our new website is coming soon.">
+  <title>Shop Impact Windows – Hurricane Impact Windows &amp; Doors in Florida</title>
+  <meta name="description" content="Hurricane impact windows and doors for Florida homes and businesses. Free quote within 24 hours. Installation in Miami-Dade, Broward and Palm Beach; material delivered across Florida and nationwide.">
+  <meta property="og:title" content="Shop Impact Windows – Hurricane Impact Windows & Doors">
+  <meta property="og:description" content="Free quote within 24 hours. Installation in Miami-Dade, Broward and Palm Beach; material delivered across Florida and nationwide.">
   <meta property="og:url" content="https://shopimpactwindows.com/">
   <meta property="og:image" content="https://shopimpactwindows.com/img/hero.jpg">
   <meta name="theme-color" content="#0B2540">
   <link rel="icon" type="image/svg+xml" href="brand/svg/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <link rel="preload" as="image" href="img/hero.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --navy: #0b2540;
-      --sky: #7dd3fc;
-      --text: #ffffff;
-      --muted: rgba(255,255,255,.82);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { background: var(--navy); }
-    body {
-      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      color: var(--text);
-      min-height: 100vh; min-height: 100svh;
-      display: flex; flex-direction: column;
-      background-color: var(--navy);
-      background-image:
-        linear-gradient(180deg, rgba(8,24,44,.6) 0%, rgba(8,24,44,.48) 45%, rgba(8,24,44,.8) 100%),
-        var(--hero, url("img/hero.jpg"));
-      background-size: cover;
-      background-position: center;
-    }
-    header, footer { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    header {
-      display: flex; align-items: center; justify-content: flex-end;
-      padding-top: 22px; gap: 12px;
-    }
-    .brand { display: block; line-height: 0; }
-    .brand img { height: 72px; width: auto; max-width: 100%; filter: drop-shadow(0 2px 14px rgba(0,0,0,.4)); }
-    @media (max-width: 560px) { .brand img { height: 54px; } }
-    .lang { display: flex; gap: 6px; }
-    .lang button {
-      font: inherit; font-size: .78rem; font-weight: 600; color: var(--text);
-      background: rgba(0,0,0,.25); border: 1px solid rgba(255,255,255,.35);
-      border-radius: 999px; padding: 6px 11px; cursor: pointer;
-      -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
-    }
-    .lang button[aria-pressed="true"] { color: var(--navy); background: #fff; border-color: #fff; }
-    main {
-      flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align: center; padding: 48px 20px;
-    }
-    h1 {
-      margin-top: 18px;
-      font-family: "Playfair Display", Georgia, serif; font-weight: 500;
-      font-size: clamp(2.4rem, 7vw, 5rem); line-height: 1.1;
-      text-shadow: 0 2px 24px rgba(0,0,0,.45);
-    }
-    h1 span { display: block; font-style: italic; }
-    .badge {
-      margin-top: 30px; display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(251,191,36,.18); color: #fde68a;
-      border: 1px solid rgba(251,191,36,.5); border-radius: 999px;
-      padding: 6px 14px; font-size: .85rem; font-weight: 600;
-      -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
-    }
-    .badge .dot { width: 8px; height: 8px; border-radius: 50%; background: #fbbf24; animation: pulse 1.6s infinite; }
-    @keyframes pulse { 0%,100% { opacity: 1 } 50% { opacity: .3 } }
-    .lead {
-      margin-top: 22px; max-width: 44ch; font-size: clamp(1rem, 2vw, 1.15rem); line-height: 1.6; color: var(--muted);
-      text-shadow: 0 1px 12px rgba(0,0,0,.5);
-    }
-    .features {
-      margin-top: 40px; width: 100%; max-width: 960px; display: grid; gap: 14px;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); text-align: left;
-    }
-    .card {
-      background: rgba(8,24,44,.55); border: 1px solid rgba(255,255,255,.2);
-      border-radius: 14px; padding: 18px 20px;
-      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-    }
-    .card .icon { font-size: 1.3rem; margin-bottom: 8px; }
-    .card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
-    .card p { font-size: .9rem; color: var(--muted); line-height: 1.5; }
-    footer {
-      padding-top: 18px; padding-bottom: 24px; font-size: .82rem; color: var(--muted);
-      display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;
-    }
-    @media (max-width: 560px) {
-      footer { justify-content: center; text-align: center; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
 </head>
-<body>
-  <header>
-    <div class="lang" role="group" aria-label="Language">
-      <button type="button" data-lang="en" aria-pressed="true">EN</button>
-      <button type="button" data-lang="es" aria-pressed="false">ES</button>
-      <button type="button" data-lang="pt" aria-pressed="false">PT</button>
-    </div>
-  </header>
+<body data-page="home">
+  <header id="site-header"></header>
 
   <main>
-    <div class="brand"><img src="brand/svg/logo-horizontal-white.svg" alt="Shop Impact Windows"></div>
-    <div class="badge"><span class="dot"></span><span data-i18n="badge">Website under construction</span></div>
-    <h1 data-i18n-html="title">Something strong is <span>coming soon.</span></h1>
-    <p class="lead" data-i18n="lead">We're building our new website. Soon you'll be able to shop hurricane impact windows and doors for your home or business in South Florida — right here.</p>
+    <section class="hero">
+      <div class="wrap">
+        <h1 data-i18n="home.h1">Something strong for your home. <em>Impact windows &amp; doors.</em></h1>
+        <p data-i18n="home.lead">Shop hurricane impact windows and doors for your home or business in Florida. Send your sizes and get a clear, written quote within 24 hours — no sales pressure.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="quote.html" data-i18n="cta.quote">Get a free quote</a>
+          <a class="btn btn-ghost" href="windows.html" data-i18n="cta.browse">See windows &amp; doors</a>
+        </div>
+        <div class="badges">
+          <span data-i18n="badge.24h">Quote within 24 hours</span>
+          <span data-i18n="badge.install">Installation: Miami-Dade · Broward · Palm Beach</span>
+          <span data-i18n="badge.ship">Material shipped Florida &amp; nationwide</span>
+        </div>
+      </div>
+    </section>
 
-    <section class="features" aria-label="What we offer">
-      <div class="card">
-        <div class="icon" aria-hidden="true">🌀</div>
-        <h3 data-i18n="f1t">Hurricane protection</h3>
-        <p data-i18n="f1d">Impact-rated windows and doors built for South Florida storms.</p>
+    <div class="wrap features">
+      <div class="grid g3">
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l8 3v6c0 5-3.4 8.4-8 9.5C7.4 20.4 4 17 4 12V6l8-3z"/></svg></div>
+          <h3 data-i18n="f1t">Hurricane protection</h3>
+          <p data-i18n="f1d">Impact-rated windows and doors built for South Florida storms.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div>
+          <h3 data-i18n="f2t">Homes &amp; businesses</h3>
+          <p data-i18n="f2d">Solutions for residential and commercial projects.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
+          <h3 data-i18n="f3t">Energy efficiency</h3>
+          <p data-i18n="f3d">Reduce noise, UV and cooling costs all year round.</p>
+        </div>
       </div>
-      <div class="card">
-        <div class="icon" aria-hidden="true">🏠</div>
-        <h3 data-i18n="f2t">Homes &amp; businesses</h3>
-        <p data-i18n="f2d">Solutions for residential and commercial projects.</p>
+    </div>
+
+    <section>
+      <div class="wrap">
+        <p class="kicker" data-i18n="home.prodK">Products</p>
+        <h2 class="title" data-i18n="home.prodH">What are you protecting?</h2>
+        <div class="grid g2" style="margin-top:26px">
+          <a class="card tile-link" href="windows.html">
+            <h3 data-i18n="nav.windows">Windows</h3>
+            <p data-i18n="home.winD">Single hung, horizontal roller, casement and picture windows — made to order in your exact size.</p>
+            <span class="more" data-i18n="home.see">See options →</span>
+          </a>
+          <a class="card tile-link" href="doors.html">
+            <h3 data-i18n="nav.doors">Doors</h3>
+            <p data-i18n="home.doorD">Sliding glass doors, French doors and entry doors with impact glass.</p>
+            <span class="more" data-i18n="home.see">See options →</span>
+          </a>
+        </div>
       </div>
-      <div class="card">
-        <div class="icon" aria-hidden="true">⚡</div>
-        <h3 data-i18n="f3t">Energy efficiency</h3>
-        <p data-i18n="f3d">Reduce noise, UV and cooling costs all year round.</p>
+    </section>
+
+    <section id="how" style="background:#fff">
+      <div class="wrap">
+        <p class="kicker" data-i18n="home.howK">How it works</p>
+        <h2 class="title" data-i18n="home.howH">Four simple steps</h2>
+        <div class="grid g4 steps" style="margin-top:26px">
+          <div class="card step"><h3 data-i18n="s1t">Send your sizes</h3><p data-i18n="s1d">Tell us the openings, approximate sizes and whether you need installation or material only.</p></div>
+          <div class="card step"><h3 data-i18n="s2t">Get your quote in 24h</h3><p data-i18n="s2d">A clear written quote by product, size, glass and finish. No sales visit required.</p></div>
+          <div class="card step"><h3 data-i18n="s3t">Measure &amp; order</h3><p data-i18n="s3d">We confirm final measurements, product approvals and permits, then order from the factory.</p></div>
+          <div class="card step"><h3 data-i18n="s4t">Install or deliver</h3><p data-i18n="s4d">Professional installation in South Florida, or delivery of your material anywhere in Florida and the U.S.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <p class="kicker" data-i18n="home.areaK">Where we work</p>
+        <h2 class="title" data-i18n="home.areaH">Two ways to buy</h2>
+        <div class="split" style="margin-top:26px">
+          <div class="zone dark">
+            <h3 data-i18n="z1t">Supply &amp; installation</h3>
+            <p data-i18n="z1d">Complete service: measurement, permit, professional installation and final inspection, by a Florida-licensed contractor.</p>
+            <div class="chips"><span>Miami-Dade</span><span>Broward</span><span>Palm Beach</span></div>
+          </div>
+          <div class="zone light">
+            <h3 data-i18n="z2t">Material only</h3>
+            <p data-i18n="z2d">For homeowners, builders and contractors with their own installer. Made-to-order products shipped to you.</p>
+            <div class="chips"><span data-i18n="z2a">All of Florida</span><span data-i18n="z2b">Nationwide</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:#fff">
+      <div class="wrap center">
+        <p class="kicker" data-i18n="home.brandK">Brands</p>
+        <h2 class="title" data-i18n="home.brandH">Trusted Florida manufacturers</h2>
+        <p class="lead" data-i18n="home.brandD">We work with impact products made in South Florida and approved for the Florida Building Code, including the High-Velocity Hurricane Zone.</p>
+        <div class="brands"><span>ES Windows</span><span>Mr. Glass</span><span>ES Residential</span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="cta-band">
+          <h2 data-i18n="home.saveH">Save with Florida incentives</h2>
+          <p data-i18n="home.saveD">Sales tax refund up to $500, My Safe Florida Home grants and insurance discounts can lower the real cost of your project.</p>
+          <a class="btn btn-primary" href="incentives.html" data-i18n="home.saveB">See savings &amp; incentives</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <span>© <span id="year">2026</span> Shop Impact Windows · South Florida</span>
-    <span>shopimpactwindows.com</span>
-  </footer>
-
-  <script>
-    const T = {
-      en: {
-        badge: "Website under construction",
-        title: 'Something strong is <span>coming soon.</span>',
-        lead: "We're building our new website. Soon you'll be able to shop hurricane impact windows and doors for your home or business in South Florida — right here.",
-        f1t: "Hurricane protection", f1d: "Impact-rated windows and doors built for South Florida storms.",
-        f2t: "Homes & businesses", f2d: "Solutions for residential and commercial projects.",
-        f3t: "Energy efficiency", f3d: "Reduce noise, UV and cooling costs all year round."
-      },
-      es: {
-        badge: "Sitio web en construcción",
-        title: 'Algo fuerte <span>viene pronto.</span>',
-        lead: "Estamos construyendo nuestro nuevo sitio web. Muy pronto podrá comprar ventanas y puertas de impacto contra huracanes para su hogar o negocio en el Sur de la Florida — aquí mismo.",
-        f1t: "Protección contra huracanes", f1d: "Ventanas y puertas de impacto hechas para las tormentas del Sur de la Florida.",
-        f2t: "Hogares y negocios", f2d: "Soluciones para proyectos residenciales y comerciales.",
-        f3t: "Eficiencia energética", f3d: "Menos ruido, rayos UV y costos de aire acondicionado todo el año."
-      },
-      pt: {
-        badge: "Site em construção",
-        title: 'Algo forte está <span>chegando em breve.</span>',
-        lead: "Estamos construindo nosso novo site. Em breve você poderá comprar janelas e portas de impacto contra furacões para sua casa ou empresa no Sul da Flórida — aqui mesmo.",
-        f1t: "Proteção contra furacões", f1d: "Janelas e portas de impacto feitas para as tempestades do Sul da Flórida.",
-        f2t: "Casas e empresas", f2d: "Soluções para projetos residenciais e comerciais.",
-        f3t: "Eficiência energética", f3d: "Menos ruído, raios UV e gastos com ar-condicionado o ano todo."
-      }
-    };
-    function setLang(lang) {
-      const t = T[lang] || T.en;
-      document.documentElement.lang = lang;
-      document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = t[el.dataset.i18n]; });
-      document.querySelectorAll("[data-i18n-html]").forEach(el => { el.innerHTML = t[el.dataset.i18nHtml]; });
-      document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === lang));
-      try { localStorage.setItem("lang", lang); } catch (e) {}
-    }
-    document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
-    let saved = null;
-    try { saved = localStorage.getItem("lang"); } catch (e) {}
-    const nav = (navigator.language || "en").slice(0, 2);
-    setLang(saved || (T[nav] ? nav : "en"));
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <footer id="site-footer"></footer>
+  <script src="assets/i18n.js"></script>
+  <script src="assets/site.js"></script>
 </body>
 </html>
