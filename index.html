@@ -9,8 +9,10 @@
   <meta property="og:description" content="Hurricane impact windows and doors in South Florida. Our new website is coming soon.">
   <meta property="og:url" content="https://shopimpactwindows.com/">
   <meta property="og:image" content="https://shopimpactwindows.com/img/hero.jpg">
-  <meta name="theme-color" content="#0b2540">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='6' width='52' height='52' rx='6' fill='%230b2540'/%3E%3Crect x='14' y='14' width='16' height='16' fill='%2338bdf8'/%3E%3Crect x='34' y='14' width='16' height='16' fill='%2338bdf8'/%3E%3Crect x='14' y='34' width='16' height='16' fill='%2338bdf8'/%3E%3Crect x='34' y='34' width='16' height='16' fill='%2338bdf8'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#0B2540">
+  <link rel="icon" type="image/svg+xml" href="brand/svg/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="preload" as="image" href="img/hero.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,11 +40,12 @@
     }
     header, footer { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
     header {
-      display: flex; align-items: center; justify-content: space-between;
+      display: flex; align-items: center; justify-content: flex-end;
       padding-top: 22px; gap: 12px;
     }
-    .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: .95rem; letter-spacing: .14em; text-transform: uppercase; }
-    .brand svg { width: 32px; height: 32px; flex: none; }
+    .brand { display: block; line-height: 0; }
+    .brand img { height: 72px; width: auto; max-width: 100%; filter: drop-shadow(0 2px 14px rgba(0,0,0,.4)); }
+    @media (max-width: 560px) { .brand img { height: 54px; } }
     .lang { display: flex; gap: 6px; }
     .lang button {
       font: inherit; font-size: .78rem; font-weight: 600; color: var(--text);
@@ -55,10 +58,6 @@
       flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
       text-align: center; padding: 48px 20px;
     }
-    .eyebrow {
-      font-size: clamp(.8rem, 1.6vw, 1rem); font-weight: 600; letter-spacing: .28em; text-transform: uppercase;
-      text-shadow: 0 1px 12px rgba(0,0,0,.4);
-    }
     h1 {
       margin-top: 18px;
       font-family: "Playfair Display", Georgia, serif; font-weight: 500;
@@ -67,7 +66,7 @@
     }
     h1 span { display: block; font-style: italic; }
     .badge {
-      margin-top: 18px; display: inline-flex; align-items: center; gap: 8px;
+      margin-top: 30px; display: inline-flex; align-items: center; gap: 8px;
       background: rgba(251,191,36,.18); color: #fde68a;
       border: 1px solid rgba(251,191,36,.5); border-radius: 999px;
       padding: 6px 14px; font-size: .85rem; font-weight: 600;
@@ -102,15 +101,6 @@
 </head>
 <body>
   <header>
-    <div class="brand">
-      <svg viewBox="0 0 64 64" aria-hidden="true">
-        <rect x="4" y="4" width="56" height="56" rx="8" fill="none" stroke="#fff" stroke-width="4"/>
-        <rect x="12" y="12" width="18" height="18" rx="2" fill="#7dd3fc"/>
-        <rect x="34" y="12" width="18" height="18" rx="2" fill="#7dd3fc" opacity=".75"/>
-        <rect x="12" y="34" width="18" height="18" rx="2" fill="#7dd3fc" opacity=".75"/>
-        <rect x="34" y="34" width="18" height="18" rx="2" fill="#7dd3fc"/>
-      </svg>
-    </div>
     <div class="lang" role="group" aria-label="Language">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
       <button type="button" data-lang="es" aria-pressed="false">ES</button>
@@ -119,7 +109,7 @@
   </header>
 
   <main>
-    <p class="eyebrow">Shop Impact Windows</p>
+    <div class="brand"><img src="brand/svg/logo-horizontal-white.svg" alt="Shop Impact Windows"></div>
     <div class="badge"><span class="dot"></span><span data-i18n="badge">Website under construction</span></div>
     <h1 data-i18n-html="title">Something strong is <span>coming soon.</span></h1>
     <p class="lead" data-i18n="lead">We're building our new website. Soon you'll be able to shop hurricane impact windows and doors for your home or business in South Florida — right here.</p>

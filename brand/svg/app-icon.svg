@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.00 512.00" width="512" height="512"><title>Shop Impact Windows</title><rect width="512" height="512" rx="112" fill="#0B2540"/><g transform="translate(111.00 93.60) scale(2.9000)">
+  <defs>
+    <clipPath id="appc"><path d="M50 3 C64 9 78 11 93 11 V52 C93 80 74 99 50 109 C26 99 7 80 7 52 V11 C22 11 36 9 50 3 Z"/></clipPath>
+    <mask id="appm" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="112"><rect width="100" height="112" fill="#fff"/><path d="M50 0 V112 M0 54 H100" stroke="#000" stroke-width="7"/></mask>
+  </defs>
+  <g clip-path="url(#appc)" mask="url(#appm)">
+    <rect width="100" height="112" fill="#FFFFFF"/>
+    <rect x="50" width="50" height="54" fill="#38BDF8"/>
+    <path d="M62 44 L82 24" stroke="#fff" stroke-opacity=".55" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M71 46 L84 33" stroke="#fff" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</g></svg>
